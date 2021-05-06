@@ -1,0 +1,5 @@
+{
+"path" : "/home/user",
+"kafkaPath": "/home/davi/EnVisia/EnScripts/kafka-projects/kafka_2.13-2.7.0/",
+"commandPath": "/home/davi/EnVisia/EnScripts/kafka-projects/kafka-container/"
+}

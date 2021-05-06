@@ -1,0 +1,157 @@
+[
+  {
+    "key": "exit",
+    "name": "exit",
+    "execute": "exit"
+  },
+  {
+    "key": "init",
+    "name": "Iniciar Zookeeper, Broker e criar tópicos.",
+    "execute": "sh kafka-init.sh"
+  },
+  {
+    "key": "0",
+    "name": "Iniciar Zookeeper único.",
+    "execute": "sh zookeeper.sh"
+  },
+  {
+    "key": "1",
+    "name": "Iniciar Broker Kafka único.",
+    "execute": "sh broker-kafka.sh"
+  },
+  {
+    "key": "2",
+    "name": "Criar Tópicos de topic-config.json.",
+    "execute": "sh topic.sh"
+  },
+  {
+    "key": "3",
+    "name": "Iniciar Consumer no tópico de service-config.json. [ ATENÇÂO ]",
+    "execute": "sh consumer.sh"
+  },
+  {
+    "key": "4",
+    "name": "Iniciar Producer no Tópico de service-config.json. [ ATENÇÂO ]",
+    "execute": "sh producer.sh"
+  },
+  {
+    "key": "5",
+    "name": "Criar um Tópico manualmete.",
+    "execute": "sh manual-topic.sh"
+  },
+  {
+    "key": "6",
+    "name": "Criar um Consumer manualmente. [ ATENÇÂO ]",
+    "execute": "sh manual-consumer.sh"
+  },
+  {
+    "key": "7",
+    "name": "Criar um Producer manualmente. [ ATENÇÂO ]",
+    "execute": "sh manual-producer.sh"
+  },
+  {
+    "key": "8",
+    "name": "Listar todos os Tópicos existentes.",
+    "execute": "sh list-all-topics.sh"
+  },
+  {
+    "key": "9",
+    "name": "Detalhar todos os Tópicos.",
+    "execute": "sh topic-detail.sh"
+  },
+  {
+    "key": "10",
+    "name": "Deletar um Tópico manualmente.",
+    "execute": "sh delete-topic.sh"
+  },
+  {
+    "key": "11",
+    "name": "Parar o Zookeeper.",
+    "execute": "sh stop-zookeeper.sh"
+  },
+  {
+    "key": "12",
+    "name": "Parar o Broker.",
+    "execute": "sh stop-broker.sh"
+  },
+  {
+  	"key": "14",
+  	"name": "Exibir todas as configurações do Broker.",
+  	"execute": "sh broker-all-settings.sh"
+  },
+  {
+  	"key": "15",
+  	"name": "Configuração Rápida do Broker.",
+  	"execute": "sh broker-quick-settings.sh"
+  },
+  {
+    "key": "16",
+    "name": "Alterar o ID do Broker. [ ATENÇÃO ]",
+    "execute": "sh server-id.sh"
+  },
+  {
+    "key": "17",
+    "name": "Configurar o Endereço IP do Broker.",
+    "execute": "sh server-address.sh"
+  },
+  {
+    "key": "18",
+    "name": "Configurar a Porta do Broker. [ ATENÇÃO ]",
+    "execute": "sh server-port.sh"
+  },
+  {
+    "key": "19",
+    "name": "Configurar o Endereço IP do Zookeeper utilizado pelo Broker.",
+    "execute": "sh zookeeper-address.sh"
+  },
+  {
+    "key": "20",
+    "name": "Configurar a Porta do Zookeeper utilizado pelo Broker.",
+    "execute": "sh zookeeper-port.sh"
+  },
+  {
+    "key": "21",
+    "name": "Configurar Tempo de retenção dos Registros.",
+    "execute": "sh log-retention.sh"
+  },
+  {
+    "key": "22",
+    "name": "Alterar o diretório padrão onde os dados são salvos. [ ATENÇÃO ]",
+    "execute": "sh default-data-dir.sh"
+  },
+  {
+    "key": "23",
+    "name": "Alterar o número de Partições de um Tópico existente.",
+    "execute": "sh topic-partition.sh"
+  },
+  {
+    "key": "24",
+    "name": "Alterar o número padrão de Partições de Tópicos.",
+    "execute": "sh default-partition-number.sh"
+  },
+  {
+    "key": "25",
+    "name": "Alterar o número padrão de Réplicas de Tópicos.",
+    "execute": "sh default-replication-factor.sh"
+  },
+  {
+    "key": "26",
+    "name": "Configurar Cluster de Brokers.",
+    "execute": "sh broker-cluster.sh"
+  },
+  {
+    "key": "27",
+    "name": "Montar Cluster de Brokers de broker-cluster.json.",
+    "execute": "sh broker-cluster-assembler.sh"
+  },
+  {
+  	"key": "28",
+  	"name": "Inicializar o Cluster de Brokers.",
+  	"execute": "sh broker-cluster-initialize.sh"
+  },
+  {
+  	"key": "29",
+  	"name": "Configuração Rápida do Cluster Broker.",
+  	"execute": "sh broker-cluster-quick-settings.sh"
+  }
+]
