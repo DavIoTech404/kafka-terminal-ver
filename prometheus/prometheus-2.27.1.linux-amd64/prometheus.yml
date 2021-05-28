@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 10s
+  evaluation_interval: 10s
+scrape_configs:
+  - job_name: 'kafka'
+    static_configs:
+      - targets:
+        - localhost:8081 #Broker 1
+        - localhost:8082 #Broker 2
+        - localhost:8085 #Zookeeper

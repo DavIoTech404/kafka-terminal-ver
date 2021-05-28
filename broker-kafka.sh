@@ -7,7 +7,7 @@ then
 fi
 sh ./config/dataVerifier.sh
 kafkaPath=$(cat ./config/default-settings.json | jq '.kafkaPath' | sed 's/"//g')
-
+prometheusPath="$(pwd)/prometheus"
 serverProperties=$(find $kafkaPath  -name  server.properties | grep -v Trash | head -n 1)
 echo "Inicializando broker..."
 
@@ -19,4 +19,10 @@ fi
 
 cd $kafkaPath
 
-bin/kafka-server-start.sh $serverProperties &
+JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64" KAFKA_OPTS="-javaagent:$prometheusPath/jmx_prometheus_javaagent-0.15.0.jar=8089:$prometheusPath/kafka-0-8-2.yml" bin/kafka-server-start.sh $serverProperties
+echo "Não foi possível conectar-se ao zookeeper... tentando novamente."
+
+JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64" KAFKA_OPTS="-javaagent:$prometheusPath/jmx_prometheus_javaagent-0.15.0.jar=8089:$prometheusPath/kafka-0-8-2.yml" bin/kafka-server-start.sh $serverProperties
+echo "Não foi possível conectar-se ao zookeeper... tentando pela última vez..."
+
+JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64" KAFKA_OPTS="-javaagent:$prometheusPath/jmx_prometheus_javaagent-0.15.0.jar=8089:$prometheusPath/kafka-0-8-2.yml" bin/kafka-server-start.sh $serverProperties

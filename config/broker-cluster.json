@@ -1,5 +1,5 @@
 {
-  "path": "/home/davi/EnVisia/EnScripts/kafka-projects/kafka_2.13-2.7.0/config/server.properties",
+  "path": "/home/davi/EnVisia/kafka-projects/kafka_2.13-2.8.0/config/server.properties",
   "id": "0",
   "port": "9092",
   "dir": "/tmp/kafka-logs"

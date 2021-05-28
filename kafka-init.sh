@@ -7,13 +7,7 @@ then
 fi
 sh ./config/dataVerifier.sh
 
-echo "Iniciando zookeeper..."
-sh ./zookeeper.sh &&
-
 echo "Executando broker kafka..."
-sh ./broker-kafka.sh &&
-
-echo "Criando tópicos..."
-sh ./topic.sh &&
+sh ./broker-kafka.sh &
 
 echo "Fim da rotina."
